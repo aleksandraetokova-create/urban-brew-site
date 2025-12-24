@@ -9,14 +9,14 @@ const CoffeeBeanFalling = ({ delay }: { delay: number }) => {
   
   return (
     <div
-      className="absolute text-4xl opacity-70"
+      className="absolute text-2xl opacity-60"
       style={{
         left: `${randomLeft}%`,
         animationDelay: `${delay}s`,
         animationDuration: `${randomDuration}s`,
       }}
     >
-      <span className="animate-fall">☕</span>
+      <span className="animate-fall">🫘</span>
     </div>
   );
 };
