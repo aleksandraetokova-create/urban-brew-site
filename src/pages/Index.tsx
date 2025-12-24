@@ -4,14 +4,14 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Cart, { CartItem } from '@/components/Cart';
 
-const FloatingLeaf = ({ delay, left, top, emoji }: { delay: number; left: number; top: number; emoji: string }) => {
+const FloatingLeaf = ({ delay, left, emoji }: { delay: number; left: number; emoji: string }) => {
   return (
     <div
-      className="absolute text-4xl opacity-25 animate-float"
+      className="absolute text-4xl animate-leaf-fall"
       style={{
         left: `${left}%`,
         animationDelay: `${delay}s`,
-        top: `${top}%`,
+        top: '-50px',
       }}
     >
       {emoji}
@@ -35,46 +35,46 @@ const SteamLine = ({ delay, offset }: { delay: number; offset: number }) => {
 };
 
 const leafPositions = [
-  { left: 5, top: 10, emoji: '🌿', delay: 0 },
-  { left: 15, top: 25, emoji: '🍂', delay: 0.5 },
-  { left: 8, top: 45, emoji: '🍁', delay: 1 },
-  { left: 12, top: 65, emoji: '☘️', delay: 1.5 },
-  { left: 18, top: 80, emoji: '🌿', delay: 2 },
-  { left: 25, top: 15, emoji: '🍁', delay: 0.3 },
-  { left: 30, top: 35, emoji: '🍂', delay: 0.8 },
-  { left: 28, top: 55, emoji: '🌿', delay: 1.3 },
-  { left: 35, top: 75, emoji: '☘️', delay: 1.8 },
-  { left: 40, top: 20, emoji: '🍂', delay: 0.6 },
-  { left: 45, top: 40, emoji: '🍁', delay: 1.1 },
-  { left: 48, top: 60, emoji: '🌿', delay: 1.6 },
-  { left: 42, top: 85, emoji: '🍂', delay: 2.1 },
-  { left: 55, top: 12, emoji: '☘️', delay: 0.4 },
-  { left: 58, top: 30, emoji: '🍁', delay: 0.9 },
-  { left: 52, top: 50, emoji: '🌿', delay: 1.4 },
-  { left: 60, top: 70, emoji: '🍂', delay: 1.9 },
-  { left: 65, top: 18, emoji: '🍁', delay: 0.7 },
-  { left: 68, top: 38, emoji: '🌿', delay: 1.2 },
-  { left: 62, top: 58, emoji: '☘️', delay: 1.7 },
-  { left: 70, top: 82, emoji: '🍂', delay: 2.2 },
-  { left: 75, top: 22, emoji: '🌿', delay: 0.5 },
-  { left: 78, top: 42, emoji: '🍁', delay: 1.0 },
-  { left: 72, top: 62, emoji: '🍂', delay: 1.5 },
-  { left: 80, top: 8, emoji: '☘️', delay: 0.2 },
-  { left: 82, top: 28, emoji: '🍁', delay: 0.7 },
-  { left: 85, top: 48, emoji: '🌿', delay: 1.2 },
-  { left: 78, top: 72, emoji: '🍂', delay: 1.7 },
-  { left: 88, top: 16, emoji: '🍁', delay: 0.4 },
-  { left: 90, top: 35, emoji: '☘️', delay: 0.9 },
-  { left: 92, top: 55, emoji: '🌿', delay: 1.4 },
-  { left: 85, top: 78, emoji: '🍂', delay: 1.9 },
-  { left: 95, top: 25, emoji: '🍁', delay: 0.6 },
-  { left: 93, top: 88, emoji: '🌿', delay: 2.4 },
-  { left: 3, top: 32, emoji: '☘️', delay: 0.8 },
-  { left: 10, top: 52, emoji: '🍁', delay: 1.3 },
-  { left: 20, top: 8, emoji: '🌿', delay: 0.2 },
-  { left: 32, top: 90, emoji: '🍂', delay: 2.5 },
-  { left: 50, top: 5, emoji: '☘️', delay: 0.1 },
-  { left: 55, top: 92, emoji: '🍁', delay: 2.6 },
+  { left: 5, emoji: '🌿', delay: 0 },
+  { left: 15, emoji: '🍂', delay: 2 },
+  { left: 8, emoji: '🍁', delay: 4 },
+  { left: 12, emoji: '☘️', delay: 6 },
+  { left: 18, emoji: '🌿', delay: 8 },
+  { left: 25, emoji: '🍁', delay: 1 },
+  { left: 30, emoji: '🍂', delay: 3 },
+  { left: 28, emoji: '🌿', delay: 5 },
+  { left: 35, emoji: '☘️', delay: 7 },
+  { left: 40, emoji: '🍂', delay: 9 },
+  { left: 45, emoji: '🍁', delay: 0.5 },
+  { left: 48, emoji: '🌿', delay: 2.5 },
+  { left: 42, emoji: '🍂', delay: 4.5 },
+  { left: 55, emoji: '☘️', delay: 6.5 },
+  { left: 58, emoji: '🍁', delay: 8.5 },
+  { left: 52, emoji: '🌿', delay: 1.5 },
+  { left: 60, emoji: '🍂', delay: 3.5 },
+  { left: 65, emoji: '🍁', delay: 5.5 },
+  { left: 68, emoji: '🌿', delay: 7.5 },
+  { left: 62, emoji: '☘️', delay: 9.5 },
+  { left: 70, emoji: '🍂', delay: 10 },
+  { left: 75, emoji: '🌿', delay: 11 },
+  { left: 78, emoji: '🍁', delay: 12 },
+  { left: 72, emoji: '🍂', delay: 13 },
+  { left: 80, emoji: '☘️', delay: 14 },
+  { left: 82, emoji: '🍁', delay: 0.2 },
+  { left: 85, emoji: '🌿', delay: 2.2 },
+  { left: 78, emoji: '🍂', delay: 4.2 },
+  { left: 88, emoji: '🍁', delay: 6.2 },
+  { left: 90, emoji: '☘️', delay: 8.2 },
+  { left: 92, emoji: '🌿', delay: 10.2 },
+  { left: 85, emoji: '🍂', delay: 12.2 },
+  { left: 95, emoji: '🍁', delay: 14.2 },
+  { left: 93, emoji: '🌿', delay: 1.8 },
+  { left: 3, emoji: '☘️', delay: 3.8 },
+  { left: 10, emoji: '🍁', delay: 5.8 },
+  { left: 20, emoji: '🌿', delay: 7.8 },
+  { left: 32, emoji: '🍂', delay: 9.8 },
+  { left: 50, emoji: '☘️', delay: 11.8 },
+  { left: 55, emoji: '🍁', delay: 13.8 },
 ];
 
 const Index = () => {
@@ -192,7 +192,6 @@ const Index = () => {
             key={`leaf-${i}`} 
             delay={leaf.delay}
             left={leaf.left}
-            top={leaf.top}
             emoji={leaf.emoji}
           />
         ))}
