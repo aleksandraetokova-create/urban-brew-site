@@ -91,7 +91,7 @@ const Index = () => {
     {
       category: 'Эспрессо напитки',
       items: [
-        { name: 'Эспрессо', description: 'Классический итальянский кофе', price: '120₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/a4752e68-b932-45ad-b013-4dc9c5bae611.jpg' },
+        { name: 'Эспрессо', description: 'Классический итальянский кофе', price: '120₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/5f7b54f3-15df-4fa8-84d8-60c63aafe9d0.jpg' },
         { name: 'Американо', description: 'Эспрессо с горячей водой', price: '150₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/a4752e68-b932-45ad-b013-4dc9c5bae611.jpg' },
         { name: 'Капучино', description: 'Эспрессо с молочной пеной', price: '180₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
         { name: 'Латте', description: 'Нежный кофе с молоком', price: '200₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/2f97e015-c1c9-4711-9ba9-29550133056b.jpg' },
@@ -100,8 +100,8 @@ const Index = () => {
     {
       category: 'Альтернатива',
       items: [
-        { name: 'Флэт Уайт', description: 'Двойной эспрессо с бархатным молоком', price: '220₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
-        { name: 'Раф', description: 'Сливочный напиток со сливками', price: '240₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
+        { name: 'Флэт Уайт', description: 'Двойной эспрессо с бархатным молоком', price: '220₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/ea294b19-d797-4084-b15c-7a44d26de0a6.jpg' },
+        { name: 'Раф', description: 'Сливочный напиток со сливками', price: '240₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/fd67f3e3-c3a3-43e4-ad05-80f092b6604f.jpg' },
         { name: 'Матча Латте', description: 'Японский зеленый чай с молоком', price: '260₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/bb7290e0-2150-4d9e-b1ed-d3a2daefeb53.jpg' },
       ]
     },
@@ -109,8 +109,8 @@ const Index = () => {
       category: 'Десерты',
       items: [
         { name: 'Круассан', description: 'Французская классика', price: '150₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/aae6884b-fc2f-412b-ad72-d86ff9cbcb0f.jpg' },
-        { name: 'Чизкейк', description: 'Нью-йоркский стиль', price: '280₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/c8775824-3ee8-4045-b645-d953b862bded.jpg' },
-        { name: 'Брауни', description: 'Шоколадный десерт', price: '250₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/c8775824-3ee8-4045-b645-d953b862bded.jpg' },
+        { name: 'Чизкейк', description: 'Нью-йоркский стиль', price: '280₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/15add8d3-be57-41b9-ba3a-41569f3c7351.jpg' },
+        { name: 'Брауни', description: 'Шоколадный десерт', price: '250₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/70055e1c-e185-4728-b0a1-4b77c17f4b55.jpg' },
       ]
     }
   ];
