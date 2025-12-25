@@ -91,26 +91,26 @@ const Index = () => {
     {
       category: 'Эспрессо напитки',
       items: [
-        { name: 'Эспрессо', description: 'Классический итальянский кофе', price: '120₽' },
-        { name: 'Американо', description: 'Эспрессо с горячей водой', price: '150₽' },
-        { name: 'Капучино', description: 'Эспрессо с молочной пеной', price: '180₽' },
-        { name: 'Латте', description: 'Нежный кофе с молоком', price: '200₽' },
+        { name: 'Эспрессо', description: 'Классический итальянский кофе', price: '120₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/a4752e68-b932-45ad-b013-4dc9c5bae611.jpg' },
+        { name: 'Американо', description: 'Эспрессо с горячей водой', price: '150₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/a4752e68-b932-45ad-b013-4dc9c5bae611.jpg' },
+        { name: 'Капучино', description: 'Эспрессо с молочной пеной', price: '180₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
+        { name: 'Латте', description: 'Нежный кофе с молоком', price: '200₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/2f97e015-c1c9-4711-9ba9-29550133056b.jpg' },
       ]
     },
     {
       category: 'Альтернатива',
       items: [
-        { name: 'Флэт Уайт', description: 'Двойной эспрессо с бархатным молоком', price: '220₽' },
-        { name: 'Раф', description: 'Сливочный напиток со сливками', price: '240₽' },
-        { name: 'Матча Латте', description: 'Японский зеленый чай с молоком', price: '260₽' },
+        { name: 'Флэт Уайт', description: 'Двойной эспрессо с бархатным молоком', price: '220₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
+        { name: 'Раф', description: 'Сливочный напиток со сливками', price: '240₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/b6c44f12-2c35-4775-866a-59e6435b62aa.jpg' },
+        { name: 'Матча Латте', description: 'Японский зеленый чай с молоком', price: '260₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/bb7290e0-2150-4d9e-b1ed-d3a2daefeb53.jpg' },
       ]
     },
     {
       category: 'Десерты',
       items: [
-        { name: 'Круассан', description: 'Французская классика', price: '150₽' },
-        { name: 'Чизкейк', description: 'Нью-йоркский стиль', price: '280₽' },
-        { name: 'Брауни', description: 'Шоколадный десерт', price: '250₽' },
+        { name: 'Круассан', description: 'Французская классика', price: '150₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/aae6884b-fc2f-412b-ad72-d86ff9cbcb0f.jpg' },
+        { name: 'Чизкейк', description: 'Нью-йоркский стиль', price: '280₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/c8775824-3ee8-4045-b645-d953b862bded.jpg' },
+        { name: 'Брауни', description: 'Шоколадный десерт', price: '250₽', image: 'https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/c8775824-3ee8-4045-b645-d953b862bded.jpg' },
       ]
     }
   ];
@@ -120,9 +120,16 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-primary" style={{ fontFamily: 'Cormorant, serif' }}>
-              Urban Brew
-            </h1>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/2bbf8264-f2fc-4447-ad34-99449dac9a09.jpg" 
+                alt="Urban Brew Logo" 
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              <h1 className="text-3xl font-bold text-primary" style={{ fontFamily: 'Cormorant, serif' }}>
+                Urban Brew
+              </h1>
+            </div>
             
             <div className="flex items-center gap-4">
               <Cart 
@@ -266,12 +273,21 @@ const Index = () => {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   {section.items.map((item, itemIdx) => (
-                    <Card key={itemIdx} className="p-6 hover:shadow-lg transition-shadow">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-semibold text-foreground">{item.name}</h4>
-                        <span className="text-lg font-bold text-primary">{item.price}</span>
+                    <Card key={itemIdx} className="p-6 hover:shadow-lg transition-shadow overflow-hidden">
+                      <div className="flex gap-4 mb-4">
+                        <img 
+                          src={item.image} 
+                          alt={item.name}
+                          className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                        />
+                        <div className="flex-1">
+                          <div className="flex justify-between items-start mb-2">
+                            <h4 className="text-xl font-semibold text-foreground">{item.name}</h4>
+                            <span className="text-lg font-bold text-primary whitespace-nowrap ml-2">{item.price}</span>
+                          </div>
+                          <p className="text-muted-foreground text-sm">{item.description}</p>
+                        </div>
                       </div>
-                      <p className="text-muted-foreground mb-4">{item.description}</p>
                       <Button
                         size="sm"
                         className="w-full"
