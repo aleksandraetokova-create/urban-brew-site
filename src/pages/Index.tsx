@@ -474,9 +474,16 @@ const Index = () => {
 
       <footer className="bg-primary text-primary-foreground py-12 px-4">
         <div className="container mx-auto max-w-6xl text-center">
-          <h3 className="text-4xl font-bold mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-            Urban Brew
-          </h3>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img 
+              src="https://cdn.poehali.dev/projects/323c2b84-3ab7-4d30-a797-e954de647b73/files/2bbf8264-f2fc-4447-ad34-99449dac9a09.jpg" 
+              alt="Urban Brew Logo" 
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <h3 className="text-4xl font-bold" style={{ fontFamily: 'Cormorant, serif' }}>
+              Urban Brew
+            </h3>
+          </div>
           <p className="text-lg mb-6 opacity-90" style={{ fontFamily: 'Caveat, cursive' }}>
             Кофе, который вдохновляет
           </p>
